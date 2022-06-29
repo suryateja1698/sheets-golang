@@ -44,7 +44,8 @@ func main() {
 		fmt.Errorf("error in retrieving sheets client: %v", err)
 	}
 
-	// Modify this to your Needs
+	// Enter the sheet name below, in my case sheet name is - sheet1, if you want to insert in 
+	// different sheet write that value below
 	rangeData := "sheet1!A1:E"
 
 	rs, err := srv.Spreadsheets.Values.Append(spreadsheetId, rangeData, &sheets.ValueRange{
